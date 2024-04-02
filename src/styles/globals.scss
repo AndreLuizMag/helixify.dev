@@ -1,0 +1,12 @@
+@import url('https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@v0.1-beta/dist/compressed/main.css');
+@import url('https://cdn.jsdelivr.net/gh/Helixify/HelixColor@v0.1-beta/dist/compressed/color-scheme.css');
+
+:root {
+	--heading-color: var(--font-primary);
+	--text-color: var(--font-tertiary);
+	--code-color: var(--font-tertiary);
+}
+
+body {
+	min-height: 100dvh;
+}
