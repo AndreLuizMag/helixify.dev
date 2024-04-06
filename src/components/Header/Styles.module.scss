@@ -1,7 +1,6 @@
 .nav {
+	background-color: hsla(0, 0%, 15%, 0.32);
+	backdrop-filter: blur(32px);
 	min-height: 3rem;
 	box-shadow: inset 0px 0px 0px 2px var(--bg-secondary);
 }
-
-
-

@@ -5,7 +5,7 @@ import { Brand } from '../Brand'
 
 export const Header = () => {
 	return (
-		<header>
+		<header className='width-100 ps-fixed pt-10 z-index-07'>
 			<div className='container-md'>
 				<nav
 					className={`${styles.nav} p-block-4 p-inline-6 ds-flex flow-row-nw justify-between align-center radius-md theme-primary`}>

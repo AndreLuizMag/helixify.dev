@@ -18,7 +18,7 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className='theme-primary ds-flex flow-col-nw justify-between'>
-				<div className='width-100 pt-10 ds-flex flow-col-nw'>
+				<div className='width-100 ds-flex flow-col-nw'>
 					<Header />
 					{children}
 				</div>
