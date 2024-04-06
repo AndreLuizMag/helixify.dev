@@ -1,10 +1,10 @@
-import { ContentWrapper } from "@/components/Helixify/ContentWrapper";
+import { HelixifyWrapped } from '@/templates/Helixify'
 
 const Home = () => {
-  return (
-    <main>
-      <ContentWrapper/>
-    </main>
-  );
+	return (
+		<main>
+			<HelixifyWrapped />
+		</main>
+	)
 }
 export default Home

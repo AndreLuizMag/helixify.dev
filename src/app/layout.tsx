@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import '@/styles/globals.scss'
 
 import { Header } from '@/components/Header'
@@ -19,11 +18,12 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className='theme-primary ds-flex flow-col-nw justify-between'>
-				{/* <Header /> */}
-				{children}
+				<div className='width-100 pt-10 ds-flex flow-col-nw'>
+					<Header />
+					{children}
+				</div>
 				<Footer />
 				<Analytics />
-				<SpeedInsights />
 			</body>
 		</html>
 	)
