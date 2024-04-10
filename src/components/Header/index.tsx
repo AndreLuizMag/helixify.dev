@@ -133,7 +133,7 @@ export const Header = () => {
 									data-state={
 										activeTab === item.id ? true : false
 									}
-									className={`${styles.item} 
+									className={`${styles.item} ${styles.LinkItem} 
 										ps-relative
 										p-block-4 
 										p-inline-6 
