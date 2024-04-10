@@ -2,6 +2,22 @@ import Link from 'next/link'
 import React from 'react'
 import styles from './Styles.module.scss'
 import { Brand } from '../Brand'
+import { Item } from './Item'
+
+const items = [
+	{
+		name: 'Helixify',
+		path: '/',
+	},
+	{
+		name: 'HelixCSS',
+		path: '/helixcss',
+	},
+	{
+		name: 'HelixColor',
+		path: '/helixcolor',
+	},
+]
 
 export const Header = () => {
 	return (
@@ -17,28 +33,12 @@ export const Header = () => {
 						</Link>
 					</div>
 
-					<ul className='p-0 list-style-none ds-inline-flex-center font-tertiary'>
-						<li>
-							<Link
-								href='/'
-								className='border-style-none p-block-4 p-inline-6 text-decoration-none font-tertiary'>
-								Helixify
-							</Link>
-						</li>
-						<li>
-							<Link
-								href='/helixcss'
-								className='border-style-none p-block-4 p-inline-6 text-decoration-none font-tertiary'>
-								HelixCSS
-							</Link>
-						</li>
-						<li>
-							<Link
-								href='/helixcolor'
-								className='border-style-none p-block-4 p-inline-6 text-decoration-none font-tertiary'>
-								HelixColor
-							</Link>
-						</li>
+					<ul className='p-0 list-style-none ds-inline-flex-center gap-sm font-tertiary'>
+						{items.map((item, index) => (
+							<li key={index}>
+								<Item href={item.path}>{item.name}</Item>
+							</li>
+						))}
 					</ul>
 
 					<div className='flex-bgs ds-flex flow-row-nw justify-end align-center'>
@@ -46,7 +46,13 @@ export const Header = () => {
 							href='https://github.com/Helixify'
 							target='_blank'
 							rel='noopener noreferrer'
-							className={`border-style-none p-4`}>
+							className={`
+								p-4
+								duration-normal 
+								property-colors
+								ease-in-out
+								hover:theme-secondary
+								border-style-none`}>
 							<svg
 								width='20'
 								height='20'
