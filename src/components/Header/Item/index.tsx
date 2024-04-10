@@ -21,7 +21,7 @@ export const Item: FC<ItemProps> = ({ href, children }) => {
         duration-normal 
         property-colors
         ease-in-out
-        hover:color-primary
+        hover:font-primary
         hover:theme-secondary
         border-style-none`}>
 			{children}
