@@ -1,15 +1,15 @@
 @import url('https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@v0.1-beta/dist/compressed/main.css');
 @import url('https://cdn.jsdelivr.net/gh/Helixify/HelixColor@v0.4-beta/dist/compressed/color-scheme.css');
 
-body {
-	min-height: 100dvh;
-}
-
 :root {
 	--heading-color: var(--font-primary);
 	--text-color: var(--font-tertiary);
 	--code-color: var(--font-tertiary);
 	--header-size: calc(32px + 52px);
+}
+
+body {
+	min-height: 100dvh;
 }
 
 hr {
