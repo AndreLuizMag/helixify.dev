@@ -113,12 +113,8 @@ export const Header = () => {
 						</Link>
 					</div>
 
-					<ul className='p-0 list-style-none ds-inline-flex-center gap-sm font-tertiary'>
-						{/* {items.map((item, index) => (
-							<li key={index}>
-							<Item href={item.path}>{item.name}</Item>
-							</li>
-						))} */}
+					{/* <ul className='p-0 list-style-none ds-inline-flex-center gap-sm font-tertiary'>
+						
 						{items.map((item, index) => (
 							<li key={index}>
 								<Link
@@ -160,7 +156,7 @@ export const Header = () => {
 								</Link>
 							</li>
 						))}
-					</ul>
+					</ul> */}
 
 					<div className='flex-bgs ds-flex flow-row-nw justify-end align-center'>
 						<Link
@@ -195,4 +191,11 @@ export const Header = () => {
 			</div>
 		</header>
 	)
+}
+{
+	/* {items.map((item, index) => (
+							<li key={index}>
+							<Item href={item.path}>{item.name}</Item>
+							</li>
+						))} */
 }
