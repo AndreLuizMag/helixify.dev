@@ -1,25 +1,99 @@
+'use client'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from './Styles.module.scss'
 import { Brand } from '../Brand'
 import { Item } from './Item'
+import { usePathname } from 'next/navigation'
+import { motion } from 'framer-motion'
 
 const items = [
 	{
+		id: 1,
 		name: 'Helixify',
 		path: '/',
 	},
 	{
+		id: 2,
 		name: 'HelixCSS',
 		path: '/helixcss',
 	},
 	{
+		id: 3,
 		name: 'HelixColor',
 		path: '/helixcolor',
 	},
 ]
 
 export const Header = () => {
+	const pathname = usePathname()
+	const [themeIcon, setThemeIcon] = useState({
+		bg: 'violet-98',
+		variant: 'duo',
+		color: 'none',
+	})
+	const [status, setStatus] = useState('null')
+	const [position, setPosition] = useState('relative')
+	const navbar = useRef<JSX.Element | null>(null)
+	const navbarHeader = 72 + 32
+	const [activeTab, setActiveTab] = useState(items[0].id)
+	const [hoveringTab, setHoveringTab] = useState(activeTab)
+	const [activeSection, setActiveSection] = useState('')
+	const sectionRefs = useRef<IntersectionObserver[]>([])
+
+	// Função para mapear o ID da página atual para o path correspondente
+	const getCurrentPagePath = () => {
+		const currentPageId = items.find(
+			(item) => item.id === activeTab
+		)
+		return currentPageId ? currentPageId.path : ''
+	}
+
+	// Uma função para lidar com a mudança de seção visível
+	const handleSectionChange: IntersectionObserverCallback =
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					const sectionPath = entry.target.id
+					setActiveTab(
+						items.find((item) => item.path === sectionPath)
+							?.id || activeTab
+					)
+					setHoveringTab(
+						items.find((item) => item.path === sectionPath)
+							?.id || activeTab
+					)
+					setActiveSection(sectionPath)
+				}
+			})
+		}
+
+	useEffect(() => {
+		// Configurar os observadores para cada seção
+		sectionRefs.current = items.map((item) => {
+			return new IntersectionObserver(handleSectionChange, {
+				rootMargin: '0px',
+				threshold: 0.5, // 50% do elemento deve estar visível
+			})
+		})
+
+		// Iniciar a observação para cada seção
+		sectionRefs.current.forEach((observer, index) => {
+			const sectionId = items[index].path
+			const target = document.getElementById(sectionId)
+			if (target) {
+				observer.observe(target)
+			}
+		})
+
+		// Limpar a observação quando o componente desmontar
+		return () => {
+			sectionRefs.current.forEach((observer) => {
+				observer.disconnect()
+			})
+		}
+	}, [])
+
 	return (
 		<header className='width-100 ps-fixed pt-10 z-index-07'>
 			<div className='container-md'>
@@ -29,14 +103,61 @@ export const Header = () => {
 						<Link
 							href='/'
 							className='all-unset cursor-pointer'>
-							<Brand.Helixify size={20} />
+							{pathname === '/helixcss' ? (
+								<Brand.HelixCSS size={20} />
+							) : pathname === '/helixcolor' ? (
+								<Brand.HelixColor size={20} />
+							) : (
+								<Brand.Helixify size={20} />
+							)}
 						</Link>
 					</div>
 
 					<ul className='p-0 list-style-none ds-inline-flex-center gap-sm font-tertiary'>
+						{/* {items.map((item, index) => (
+							<li key={index}>
+							<Item href={item.path}>{item.name}</Item>
+							</li>
+						))} */}
 						{items.map((item, index) => (
 							<li key={index}>
-								<Item href={item.path}>{item.name}</Item>
+								<Link
+									href={item.path}
+									onClick={() => setActiveTab(item.id)}
+									onMouseEnter={() =>
+										setHoveringTab(item.id)
+									}
+									onMouseLeave={() =>
+										setHoveringTab(activeTab)
+									}
+									data-state={
+										activeTab === item.id ? true : false
+									}
+									className={`${styles.item} 
+										ps-relative
+										p-block-4 
+										p-inline-6 
+										text-decoration-none 
+										font-tertiary 
+										border-style-none`}>
+									{hoveringTab === item.id && (
+										<motion.span
+											layoutId='bubble'
+											className={`${styles.Indicator} bottom-00 ps-absolute radius-sm bgc-red-normal`}
+											transition={{
+												type: 'spring',
+												bounce: 0.2,
+												duration: 0.6,
+											}}
+											data-state={
+												activeTab === hoveringTab
+													? true
+													: false
+											}
+										/>
+									)}
+									{item.name}
+								</Link>
 							</li>
 						))}
 					</ul>

@@ -1,0 +1,24 @@
+.gradient {
+	top: 0;
+	left: -8rem;
+}
+
+.helix {
+	&CSS {
+		color: var(--blue-light);
+	}
+	&Color {
+		color: var(--green-light);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.helix {
+		&CSS {
+			color: var(--blue-dark);
+		}
+		&Color {
+			color: var(--green-dark);
+		}
+	}
+}

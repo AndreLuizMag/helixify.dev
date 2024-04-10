@@ -5,6 +5,7 @@
 	--heading-color: var(--font-primary);
 	--text-color: var(--font-tertiary);
 	--code-color: var(--font-tertiary);
+	--header-size: calc(32px + 52px);
 }
 
 body {
@@ -14,4 +15,8 @@ body {
 hr {
 	border: none;
 	height: 1px;
+}
+
+.p-header-height {
+	padding-top: var(--header-size);
 }
