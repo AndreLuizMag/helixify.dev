@@ -27,72 +27,61 @@ const items = [
 
 export const Header = () => {
 	const pathname = usePathname()
-	const [themeIcon, setThemeIcon] = useState({
-		bg: 'violet-98',
-		variant: 'duo',
-		color: 'none',
-	})
-	const [status, setStatus] = useState('null')
-	const [position, setPosition] = useState('relative')
-	const navbar = useRef<JSX.Element | null>(null)
-	const navbarHeader = 72 + 32
-	const [activeTab, setActiveTab] = useState(items[0].id)
-	const [hoveringTab, setHoveringTab] = useState(activeTab)
-	const [activeSection, setActiveSection] = useState('')
-	const sectionRefs = useRef<IntersectionObserver[]>([])
+	// const [activeTab, setActiveTab] = useState(items[0].id)
+	// const sectionRefs = useRef<IntersectionObserver[]>([])
 
 	// Função para mapear o ID da página atual para o path correspondente
-	const getCurrentPagePath = () => {
-		const currentPageId = items.find(
-			(item) => item.id === activeTab
-		)
-		return currentPageId ? currentPageId.path : ''
-	}
+	// const getCurrentPagePath = () => {
+	// 	const currentPageId = items.find(
+	// 		(item) => item.id === activeTab
+	// 	)
+	// 	return currentPageId ? currentPageId.path : ''
+	// }
 
-	// Uma função para lidar com a mudança de seção visível
-	const handleSectionChange: IntersectionObserverCallback =
-		(entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					const sectionPath = entry.target.id
-					setActiveTab(
-						items.find((item) => item.path === sectionPath)
-							?.id || activeTab
-					)
-					setHoveringTab(
-						items.find((item) => item.path === sectionPath)
-							?.id || activeTab
-					)
-					setActiveSection(sectionPath)
-				}
-			})
-		}
+	// // Uma função para lidar com a mudança de seção visível
+	// const handleSectionChange: IntersectionObserverCallback =
+	// 	(entries) => {
+	// 		entries.forEach((entry) => {
+	// 			if (entry.isIntersecting) {
+	// 				const sectionPath = entry.target.id
+	// 				setActiveTab(
+	// 					items.find((item) => item.path === sectionPath)
+	// 						?.id || activeTab
+	// 				)
+	// 				setHoveringTab(
+	// 					items.find((item) => item.path === sectionPath)
+	// 						?.id || activeTab
+	// 				)
+	// 				setActiveSection(sectionPath)
+	// 			}
+	// 		})
+	// 	}
 
-	useEffect(() => {
-		// Configurar os observadores para cada seção
-		sectionRefs.current = items.map((item) => {
-			return new IntersectionObserver(handleSectionChange, {
-				rootMargin: '0px',
-				threshold: 0.5, // 50% do elemento deve estar visível
-			})
-		})
+	// useEffect(() => {
+	// 	// Configurar os observadores para cada seção
+	// 	sectionRefs.current = items.map((item) => {
+	// 		return new IntersectionObserver(handleSectionChange, {
+	// 			rootMargin: '0px',
+	// 			threshold: 0.5, // 50% do elemento deve estar visível
+	// 		})
+	// 	})
 
-		// Iniciar a observação para cada seção
-		sectionRefs.current.forEach((observer, index) => {
-			const sectionId = items[index].path
-			const target = document.getElementById(sectionId)
-			if (target) {
-				observer.observe(target)
-			}
-		})
+	// 	// Iniciar a observação para cada seção
+	// 	sectionRefs.current.forEach((observer, index) => {
+	// 		const sectionId = items[index].path
+	// 		const target = document.getElementById(sectionId)
+	// 		if (target) {
+	// 			observer.observe(target)
+	// 		}
+	// 	})
 
-		// Limpar a observação quando o componente desmontar
-		return () => {
-			sectionRefs.current.forEach((observer) => {
-				observer.disconnect()
-			})
-		}
-	}, [])
+	// 	// Limpar a observação quando o componente desmontar
+	// 	return () => {
+	// 		sectionRefs.current.forEach((observer) => {
+	// 			observer.disconnect()
+	// 		})
+	// 	}
+	// }, [])
 
 	return (
 		<header className='width-100 ps-fixed pt-10 z-index-07'>
