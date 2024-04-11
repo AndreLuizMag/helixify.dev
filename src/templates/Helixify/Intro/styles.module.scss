@@ -2,7 +2,7 @@
 	min-height: 80dvh;
 
 	.title {
-		font-size: 4em;
+		font-size: clamp(2.5rem, 10vw, 4rem);
 	}
 
 	// &::before {
