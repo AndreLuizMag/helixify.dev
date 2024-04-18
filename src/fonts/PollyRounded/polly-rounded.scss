@@ -1,0 +1,30 @@
+@font-face {
+	font-family: 'Polly Rounded';
+	src: local('./'),
+		url('polly-rounded-thin.otf') format('opentype');
+	font-weight: 200;
+}
+@font-face {
+	font-family: 'Polly Rounded';
+	src: local('./'),
+		url('polly-rounded-light.otf') format('opentype');
+	font-weight: 300;
+}
+@font-face {
+	font-family: 'Polly Rounded';
+	src: local('./'),
+		url('polly-rounded-light.otf') format('opentype');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Polly Rounded';
+	src: local('./'),
+		url('polly-rounded-bold.otf') format('opentype');
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'Polly Rounded';
+	src: local('./'),
+		url('polly-rounded-bold.otf') format('opentype');
+	font-weight: 700;
+}
