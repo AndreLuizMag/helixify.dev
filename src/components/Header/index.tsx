@@ -1,11 +1,11 @@
 'use client'
+import './index.scss'
 import Link from 'next/link'
-import React, { useEffect, useRef, useState } from 'react'
-import styles from './Styles.module.scss'
+import React, { useRef, useState } from 'react'
 import { Brand } from '../Brand'
 import { Item } from './Item'
 import { usePathname } from 'next/navigation'
-import { motion } from 'framer-motion'
+import { BtnToggleMenu } from './BtnToggleMenu'
 
 const items = [
 	{
@@ -27,10 +27,11 @@ const items = [
 
 export const Header = () => {
 	const pathname = usePathname()
+
 	// const [activeTab, setActiveTab] = useState(items[0].id)
 	// const sectionRefs = useRef<IntersectionObserver[]>([])
 
-	// Função para mapear o ID da página atual para o path correspondente
+	// // Função para mapear o ID da página atual para o path correspondente
 	// const getCurrentPagePath = () => {
 	// 	const currentPageId = items.find(
 	// 		(item) => item.id === activeTab
@@ -82,12 +83,10 @@ export const Header = () => {
 	// 		})
 	// 	}
 	// }, [])
-
 	return (
 		<header className='width-100 ps-fixed pt-10 z-index-07'>
 			<div className='container-md'>
-				<nav
-					className={`${styles.nav} p-block-4 p-inline-6 ds-flex flow-row-nw justify-between align-center radius-md theme-primary`}>
+				<nav className='p-block-4 p-inline-6 ds-flex flow-row-nw justify-between align-center radius-md'>
 					<div className='flex-bgs ds-flex flow-row-nw justify-start align-center'>
 						<Link
 							href='/'
@@ -102,8 +101,9 @@ export const Header = () => {
 						</Link>
 					</div>
 
+					<BtnToggleMenu />
+
 					{/* <ul className='p-0 list-style-none ds-inline-flex-center gap-sm font-tertiary'>
-						
 						{items.map((item, index) => (
 							<li key={index}>
 								<Link
