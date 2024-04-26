@@ -1,10 +1,16 @@
 'use client'
-import React, { useState } from 'react'
+import React, { FC, useState } from 'react'
 import './index.scss'
 import { CaretDown, CaretUp } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
 
-export const BtnToggleMenu = () => {
+interface BtnToggleMenuProps {
+	onClick: () => void
+}
+
+export const BtnToggleMenu: FC<BtnToggleMenuProps> = ({
+	onClick,
+}) => {
 	const [isHovered, setIsHovered] = useState(false)
 	const [isClicked, setIsClicked] = useState(false)
 
@@ -35,14 +41,7 @@ export const BtnToggleMenu = () => {
 				<motion.div
 					className='ds-flex flow-col-nw gap-md'
 					animate={{
-						translateY:
-							!isClicked && !isHovered
-								? 0
-								: !isClicked && isHovered
-								? 4
-								: isClicked && isHovered
-								? 28
-								: 32,
+						translateY: isClicked ? 0 : 32,
 					}}
 					transition={{
 						type: 'spring',
@@ -56,5 +55,11 @@ export const BtnToggleMenu = () => {
 		</>
 	)
 }
-// isHovered ? 4 : 0
-// isClicked ? 32 : 0,
+
+// !isClicked && !isHovered
+// ? 0
+// : !isClicked && isHovered
+// ? 4
+// : isClicked && isHovered
+// ? 28
+// : 32,
