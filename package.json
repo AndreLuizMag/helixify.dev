@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@phosphor-icons/react": "^2.1.5",
-    "@uidotdev/usehooks": "^2.4.1",
     "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.10",
     "framer-motion": "^11.0.24",
@@ -19,6 +17,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@phosphor-icons/react": "^2.1.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

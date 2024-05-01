@@ -9,7 +9,6 @@ import { BtnToggleMenu } from './BtnToggleMenu'
 import { AnimatePresence, motion } from 'framer-motion'
 import UseWindowSize from '@/hook/UseWindowSize'
 import { MadeBy } from '../MadeBy'
-import { transform } from 'next/dist/build/swc'
 import { GithubLogo } from '@phosphor-icons/react'
 
 const items = [
@@ -98,14 +97,18 @@ export const Header = () => {
 								</Link>
 							</div>
 
+							{/* 
+								Error: Hydration failed because the initial UI does not match what was rendered on the server.
+								Warning: Expected server HTML to contain a matching <div> in <nav>.
+							*/}
 							{!isMobile && (
-								<ul className='p-0 list-style-none ds-inline-flex-center gap-sm font-tertiary'>
+								<div className='ds-inline-flex-center gap-sm font-tertiary'>
 									{items.map((item, index) => (
 										<Item key={index} href={item.path}>
 											{item.name}
 										</Item>
 									))}
-								</ul>
+								</div>
 							)}
 
 							{isMobile && (
@@ -146,9 +149,12 @@ export const Header = () => {
 											},
 										}}
 										className='nav-mobile width-100 ds-flex flow-col-nw justify-start align-end gap-lg p-block-4'>
-										<ul className='p-0 list-style-none ds-inline-flex flow-col-nw align-end gap-sm font-tertiary'>
+										<div className='ds-inline-flex flow-col-nw align-end gap-sm font-tertiary'>
 											{items.map((item, index) => (
-												<Item key={index} href={item.path}>
+												<Item
+													key={index}
+													href={item.path}
+													onClick={handleToggleMenu}>
 													{item.name}
 												</Item>
 											))}
@@ -157,7 +163,7 @@ export const Header = () => {
 												openInNewTab>
 												Github
 											</Item>
-										</ul>
+										</div>
 										<div className='made-by-content width-100 ds-flex flow-row-nw justify-start align-center'>
 											<MadeBy />
 										</div>

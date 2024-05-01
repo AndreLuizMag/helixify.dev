@@ -6,14 +6,14 @@ header {
 		transform-origin: top;
 
 		.item {
-			background-color: transparent;
 			position: relative;
 			text-decoration: none;
 			line-height: 1;
 			color: var(--font-tertiary);
+			background-color: transparent;
 			transition: {
 				duration: var(--duration-normal);
-				property: color, background-color;
+				property: color;
 				timing-function: var(--ease-in-out);
 			}
 			&:after {
@@ -21,10 +21,10 @@ header {
 				content: '';
 				position: absolute;
 				inset: 0;
-				background-color: hsla(0, 0%, 100%, 0.32);
 				opacity: 0;
-				border-radius: 0.5rem;
 				transform: scale(0.8);
+				border-radius: 0.5rem;
+				background-color: hsla(0, 0%, 100%, 0.32);
 				transition: {
 					duration: var(--duration-normal);
 					property: transform, opacity;
@@ -33,18 +33,12 @@ header {
 			}
 			&:hover {
 				color: var(--font-primary);
-				// background-color: hsla(0, 0%, 100%, 0.32);
 
 				&:after {
 					transform: scale(1);
 					opacity: 1;
 				}
 			}
-		}
-	}
-	&[data-state='open'] {
-		nav {
-			// background-color: red;
 		}
 	}
 }
@@ -58,8 +52,6 @@ header {
 				}
 
 				&:hover {
-					color: var(--font-primary);
-
 					&:after {
 						transform: scale(1);
 						opacity: 1;

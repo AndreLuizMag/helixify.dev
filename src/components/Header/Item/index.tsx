@@ -6,13 +6,14 @@ interface ItemProps
 	href: string
 	children: ReactNode
 	openInNewTab?: boolean
+	onClick?: () => void
 }
 
 export const Item: FC<ItemProps> = ({
 	href,
 	children,
 	openInNewTab = false,
-	...props
+	onClick,
 }) => {
 	const target = openInNewTab ? '_blank' : undefined
 
@@ -23,9 +24,9 @@ export const Item: FC<ItemProps> = ({
 	return (
 		<Link
 			href={href}
-			{...props}
 			target={target}
 			rel={rel}
+			onClick={onClick}
 			className='item p-block-4 p-inline-6'>
 			{children}
 		</Link>

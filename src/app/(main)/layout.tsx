@@ -8,10 +8,8 @@ export default function RootLayout({
 }>) {
 	return (
 		<>
-			<div className='width-100 ds-flex flow-col-nw'>
-				<Header />
-				{children}
-			</div>
+			<Header />
+			{children}
 			<Footer />
 		</>
 	)

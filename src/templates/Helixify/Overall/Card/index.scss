@@ -1,0 +1,20 @@
+@import '../../../../styles/variable.scss';
+
+.overall-card {
+	.title {
+		&-max {
+			font-size: 3em;
+		}
+		&-min {
+			font-size: 2em;
+		}
+	}
+
+	@media (max-width: $screen-lg) {
+		.title {
+			&-max {
+				font-size: 2em;
+			}
+		}
+	}
+}
