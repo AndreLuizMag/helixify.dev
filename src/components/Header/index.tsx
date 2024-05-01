@@ -6,7 +6,7 @@ import { Brand } from '../Brand'
 import { Item } from './Item'
 import { usePathname } from 'next/navigation'
 import { BtnToggleMenu } from './BtnToggleMenu'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import UseWindowSize from '@/hook/UseWindowSize'
 import { MadeBy } from '../MadeBy'
 import { transform } from 'next/dist/build/swc'
@@ -61,11 +61,6 @@ export const Header = () => {
 		},
 	}
 
-	const navMobileVariant = {
-		open: { opacity: 1, transform: 'translateX(2rem)' },
-		closed: { opacity: 0, transform: 'translateX(0rem)' },
-	}
-
 	return (
 		<header className='width-100 ps-fixed pt-10 z-index-07'>
 			<div className='container-md'>
@@ -113,7 +108,10 @@ export const Header = () => {
 							)}
 
 							{isMobile && (
-								<BtnToggleMenu onClick={handleToggleMenu} />
+								<BtnToggleMenu
+									onClick={handleToggleMenu}
+									isClicked={toggleMenu}
+								/>
 							)}
 
 							{!isMobile && (
@@ -149,17 +147,19 @@ export const Header = () => {
 							)}
 						</nav>
 
-						{isMobile
-							? toggleMenu && (
+						{isMobile && (
+							<AnimatePresence>
+								{toggleMenu && (
 									<motion.nav
-										animate={toggleMenu ? 'open' : 'closed'}
-										variants={navMobileVariant}
+										initial={{ opacity: 0 }}
+										animate={{
+											opacity: 1,
+										}}
 										exit={{ opacity: 0 }}
 										transition={{
-											type: 'tween',
-											duration: 0.8,
-											bounce: 0.4,
-											delay: 0.8,
+											opacity: {
+												duration: 0.2,
+											},
 										}}
 										className='nav-mobile width-100 ds-flex flow-col-nw justify-start align-end gap-lg p-block-4'>
 										<ul className='p-0 list-style-none ds-inline-flex flow-col-nw align-end gap-sm font-tertiary'>
@@ -174,12 +174,13 @@ export const Header = () => {
 												Github
 											</Item>
 										</ul>
-										<div className='width-100 ds-flex flow-row-nw justify-start align-center'>
+										<div className='made-by-content width-100 ds-flex flow-row-nw justify-start align-center'>
 											<MadeBy />
 										</div>
 									</motion.nav>
-							  )
-							: null}
+								)}
+							</AnimatePresence>
+						)}
 					</motion.div>
 				</motion.div>
 			</div>

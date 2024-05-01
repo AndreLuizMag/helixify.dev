@@ -6,16 +6,15 @@ import { motion } from 'framer-motion'
 
 interface BtnToggleMenuProps {
 	onClick: () => void
+	isClicked: boolean
 }
 
 export const BtnToggleMenu: FC<BtnToggleMenuProps> = ({
 	onClick,
+	isClicked,
 }) => {
-	const [isClicked, setIsClicked] = useState(false)
-
 	const handleClick = () => {
 		onClick()
-		setIsClicked((prev) => !prev)
 	}
 
 	return (
@@ -43,11 +42,3 @@ export const BtnToggleMenu: FC<BtnToggleMenuProps> = ({
 		</>
 	)
 }
-
-// !isClicked && !isHovered
-// ? 0
-// : !isClicked && isHovered
-// ? 4
-// : isClicked && isHovered
-// ? 28
-// : 32,
