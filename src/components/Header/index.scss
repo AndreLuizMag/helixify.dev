@@ -1,17 +1,44 @@
 header {
-	.base {
-		transform-origin: top;
-	}
 	.content {
 		background-color: hsla(0, 0%, 100%, 0.32);
 		backdrop-filter: blur(32px);
-		min-height: 3rem;
 		box-shadow: inset 0px 0px 0px 2px var(--bg-secondary);
+		transform-origin: top;
 
 		.item {
 			background-color: transparent;
-			&:hover {
+			position: relative;
+			text-decoration: none;
+			line-height: 1;
+			color: var(--font-tertiary);
+			transition: {
+				duration: var(--duration-normal);
+				property: color, background-color;
+				timing-function: var(--ease-in-out);
+			}
+			&:after {
+				z-index: -1;
+				content: '';
+				position: absolute;
+				inset: 0;
 				background-color: hsla(0, 0%, 100%, 0.32);
+				opacity: 0;
+				border-radius: 0.5rem;
+				transform: scale(0.8);
+				transition: {
+					duration: var(--duration-normal);
+					property: transform, opacity;
+					timing-function: var(--ease-in-out);
+				}
+			}
+			&:hover {
+				color: var(--font-primary);
+				// background-color: hsla(0, 0%, 100%, 0.32);
+
+				&:after {
+					transform: scale(1);
+					opacity: 1;
+				}
 			}
 		}
 	}
@@ -26,8 +53,17 @@ header {
 		.content {
 			background-color: hsla(0, 0%, 15%, 0.32);
 			.item {
-				&:hover {
+				&:after {
 					background-color: hsla(0, 0%, 15%, 0.32);
+				}
+
+				&:hover {
+					color: var(--font-primary);
+
+					&:after {
+						transform: scale(1);
+						opacity: 1;
+					}
 				}
 			}
 		}
