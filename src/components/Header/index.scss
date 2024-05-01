@@ -1,5 +1,8 @@
 header {
-	nav {
+	.base {
+		transform-origin: top;
+	}
+	.content {
 		background-color: hsla(0, 0%, 100%, 0.32);
 		backdrop-filter: blur(32px);
 		min-height: 3rem;
@@ -12,10 +15,15 @@ header {
 			}
 		}
 	}
+	&[data-state='open'] {
+		nav {
+			// background-color: red;
+		}
+	}
 }
 @media (prefers-color-scheme: dark) {
 	header {
-		nav {
+		.content {
 			background-color: hsla(0, 0%, 15%, 0.32);
 			.item {
 				&:hover {

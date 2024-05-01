@@ -1,5 +1,5 @@
-import { HelixColorWrapped } from '@/templates/HelixColor'
 import React from 'react'
+import { HelixColorWrapped } from '@/templates/HelixColor'
 
 const HelixColor = () => {
 	return (

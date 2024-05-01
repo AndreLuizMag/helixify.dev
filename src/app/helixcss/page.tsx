@@ -1,5 +1,5 @@
-import { HelixCSSWrapped } from '@/templates/HelixCSS'
 import React from 'react'
+import { HelixCSSWrapped } from '@/templates/HelixCSS'
 
 const HelixCSS = () => {
 	return (

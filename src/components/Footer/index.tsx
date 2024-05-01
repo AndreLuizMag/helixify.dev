@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { Brand } from '../Brand'
+import { MadeBy } from '../MadeBy'
 
 export const Footer = () => {
 	return (
@@ -8,19 +9,7 @@ export const Footer = () => {
 			<div className='container-md'>
 				<hr className='theme-secondary' />
 				<div className='widty-100 p-block-10 ds-flex flow-row-nw justify-between align-center'>
-					<div className='ds-flex flow-col-nw gap-xs font-size-sm'>
-						<Brand.Text size={18} />
-						<span>
-							Made by{' '}
-							<Link
-								href='https://github.com/AndreLuizMag'
-								target='_blank'
-								rel='noopener noreferrer'
-								className='all-unset cursor-pointer'>
-								@AndreLuizMag
-							</Link>
-						</span>
-					</div>
+					<MadeBy />
 					<Link
 						href='https://github.com/Helixify'
 						target='_blank'

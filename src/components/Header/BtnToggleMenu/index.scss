@@ -1,5 +1,6 @@
 .btn-toggle {
 	height: 2rem;
+	background-color: transparent;
 
 	&[data-state='open'] {
 		background-color: hsla(5, 80%, 90%, 0.32);
