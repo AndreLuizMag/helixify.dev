@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 export const Intro = () => {
 	return (
 		<section
-			className={`${styles.intro} width-100 ps-relative ds-flex-center pt-16 theme-primary`}>
+			className={`${styles.intro} width-100 ps-relative ds-flex-center pt-16 bg-primary`}>
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
@@ -26,7 +26,7 @@ export const Intro = () => {
 							className={`${styles.title} color-helixify`}>
 							A platform open-source for everyone
 						</h1>
-						<p className='font-tertiary'>
+						<p className='color-tertiary'>
 							Helixify is a centralized platform that
 							provides open-source solutions for web
 							developers, simplifying the development

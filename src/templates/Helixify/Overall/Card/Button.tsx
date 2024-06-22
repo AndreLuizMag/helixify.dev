@@ -14,7 +14,7 @@ export const Button: FC<ButtonProps> = ({
 	return (
 		<Link
 			href={href}
-			className='ds-inline-flex flow-row-nw align-end gap-sm text-decoration-none font-tertiary'>
+			className='ds-inline-flex flow-row-nw align-end gap-sm text-decoration-none color-tertiary'>
 			<span>{children}</span>
 			<CaretRight size={16} className='mb-1' />
 		</Link>

@@ -102,7 +102,7 @@ export const Header = () => {
 								Warning: Expected server HTML to contain a matching <div> in <nav>.
 							*/}
 							{!isMobile && (
-								<div className='ds-inline-flex-center gap-sm font-tertiary'>
+								<div className='ds-inline-flex-center gap-sm color-tertiary'>
 									{items.map((item, index) => (
 										<Item key={index} href={item.path}>
 											{item.name}
@@ -149,7 +149,7 @@ export const Header = () => {
 											},
 										}}
 										className='nav-mobile width-100 ds-flex flow-col-nw justify-start align-end gap-lg p-block-4'>
-										<div className='ds-inline-flex flow-col-nw align-end gap-sm font-tertiary'>
+										<div className='ds-inline-flex flow-col-nw align-end gap-sm color-tertiary'>
 											{items.map((item, index) => (
 												<Item
 													key={index}

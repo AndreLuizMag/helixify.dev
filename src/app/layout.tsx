@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import '@/styles/main.scss'
+import 'helix-color'
 // import localFont from 'next/font/local'
 
 // const PollyRounded = localFont({
@@ -42,7 +43,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className='theme-primary ds-flex flow-col-nw justify-between'>
+			<body className='ds-flex flow-col-nw justify-between'>
 				{children}
 				<Analytics />
 			</body>

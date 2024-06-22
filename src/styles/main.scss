@@ -1,17 +1,18 @@
 @import 'https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@v0.6-beta/dist/compressed/main.css';
-@import 'https://cdn.jsdelivr.net/gh/Helixify/HelixColor@v0.4-beta/dist/compressed/color-scheme.css';
+// @import 'https://cdn.jsdelivr.net/gh/Helixify/HelixColor@v0.4-beta/dist/compressed/color-scheme.css';
 @import '../fonts/PollyRounded/polly-rounded.scss';
 
 :root {
 	--font-family: Polly Rounded;
-	--heading-color: var(--font-primary);
-	--text-color: var(--font-tertiary);
-	--code-color: var(--font-tertiary);
+	--heading-color: var(--color-1);
+	--text-color: var(--color-3);
+	--code-color: var(--color-3);
 	--header-size: calc(32px + 52px);
 }
 
 body {
 	min-height: 100dvh;
+	background-color: var(--bg-1);
 }
 
 hr {

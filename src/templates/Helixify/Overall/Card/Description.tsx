@@ -8,5 +8,5 @@ interface DescriptionProps
 export const Description: FC<DescriptionProps> = ({
 	children,
 }) => {
-	return <p className='font-tertiary'>{children}</p>
+	return <p className='color-tertiary'>{children}</p>
 }

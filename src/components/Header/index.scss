@@ -2,14 +2,14 @@ header {
 	.content {
 		background-color: hsla(0, 0%, 100%, 0.32);
 		backdrop-filter: blur(32px);
-		box-shadow: inset 0px 0px 0px 2px var(--bg-secondary);
+		box-shadow: inset 0px 0px 0px 2px var(--bg-2);
 		transform-origin: top;
 
 		.item {
 			position: relative;
 			text-decoration: none;
 			line-height: 1;
-			color: var(--font-tertiary);
+			color: var(--color-3);
 			background-color: transparent;
 			transition: {
 				duration: var(--duration-normal);
@@ -32,7 +32,7 @@ header {
 				}
 			}
 			&:hover {
-				color: var(--font-primary);
+				color: var(--color-1);
 
 				&:after {
 					transform: scale(1);

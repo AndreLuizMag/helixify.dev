@@ -21,7 +21,7 @@ export const BtnToggleMenu: FC<BtnToggleMenuProps> = ({
 			onClick={handleClick}
 			type='button'
 			title='Toggle menu'
-			className='btn-toggle p-block-4 p-inline-6 ds-flex flow-row-nw align-end text-decoration-none font-tertiary border-style-none overflow-hidden radius-xs duration-normal property-colors ease-in-out'
+			className='btn-toggle p-block-4 p-inline-6 ds-flex flow-row-nw align-end text-decoration-none color-tertiary border-style-none overflow-hidden radius-xs duration-normal property-colors ease-in-out'
 			data-state={isClicked ? 'open' : 'closed'}>
 			<motion.div
 				className='ds-flex flow-col-nw gap-md'

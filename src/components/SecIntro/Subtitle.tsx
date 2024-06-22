@@ -9,7 +9,7 @@ export const Subtitle: FC<SubtitleProps> = ({
 	children,
 }) => {
 	return (
-		<p className='text-align-center font-primary'>
+		<p className='text-align-center color-primary'>
 			{children}
 		</p>
 	)
