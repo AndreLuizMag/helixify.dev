@@ -1,13 +1,9 @@
-import React, { FC, HTMLAttributes, ReactNode } from 'react'
+import React, { type ReactNode } from 'react';
 
-interface GroupProps extends HTMLAttributes<HTMLElement> {
-	children: ReactNode
-}
+type GroupProps = {
+	children: ReactNode;
+};
 
-export const Group: FC<GroupProps> = ({ children }) => {
-	return (
-		<div className='ds-flex-center flow-col-nw gap-md'>
-			{children}
-		</div>
-	)
-}
+export const Group = ({ children }: GroupProps) => {
+	return <div className="ds-flex-center flow-col-nw gap-md">{children}</div>;
+};

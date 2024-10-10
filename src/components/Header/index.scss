@@ -1,6 +1,7 @@
 header {
 	.content {
 		background-color: hsla(0, 0%, 100%, 0.32);
+		-webkit-backdrop-filter: blur(32px);
 		backdrop-filter: blur(32px);
 		box-shadow: inset 0px 0px 0px 2px var(--bg-secondary);
 		transform-origin: top;

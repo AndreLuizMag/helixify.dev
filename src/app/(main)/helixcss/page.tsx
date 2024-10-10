@@ -1,12 +1,12 @@
-import React from 'react'
-import { HelixCSSWrapped } from '@/templates/HelixCSS'
+import React from 'react';
+import { HelixCSSWrapped } from '@/app/templates/HelixCSS';
 
 const HelixCSS = () => {
 	return (
 		<main>
 			<HelixCSSWrapped />
 		</main>
-	)
-}
+	);
+};
 
-export default HelixCSS
+export default HelixCSS;

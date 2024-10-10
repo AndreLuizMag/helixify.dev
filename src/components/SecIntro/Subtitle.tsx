@@ -1,16 +1,9 @@
-import React, { FC, HTMLAttributes, ReactNode } from 'react'
+import React, { type ReactNode } from 'react';
 
-interface SubtitleProps
-	extends HTMLAttributes<HTMLElement> {
-	children: ReactNode
-}
+type SubtitleProps = {
+	children: ReactNode;
+};
 
-export const Subtitle: FC<SubtitleProps> = ({
-	children,
-}) => {
-	return (
-		<p className='text-align-center font-primary'>
-			{children}
-		</p>
-	)
-}
+export const Subtitle = ({ children }: SubtitleProps) => {
+	return <p className="text-align-center font-primary">{children}</p>;
+};

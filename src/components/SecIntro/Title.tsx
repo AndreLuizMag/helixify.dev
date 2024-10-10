@@ -1,9 +1,9 @@
-import React, { FC, HTMLAttributes, ReactNode } from 'react'
+import React, { type ReactNode } from 'react';
 
-interface TitleProps extends HTMLAttributes<HTMLElement> {
-	children: ReactNode
-}
+type TitleProps = {
+	children: ReactNode;
+};
 
-export const Title: FC<TitleProps> = ({ children }) => {
-	return <h1 className='text-align-center'>{children}</h1>
-}
+export const Title = ({ children }: TitleProps) => {
+	return <h1 className="text-align-center">{children}</h1>;
+};

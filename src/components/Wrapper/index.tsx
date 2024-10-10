@@ -1,40 +1,35 @@
-'use client'
-import { ReactNode, useEffect, useRef } from 'react'
-import {
-	LayoutGroup,
-	motion,
-	useAnimation,
-	useInView,
-} from 'framer-motion'
+'use client';
+import { type ReactNode, useEffect, useRef } from 'react';
+import { LayoutGroup, motion, useAnimation, useInView } from 'framer-motion';
 
-import { appFadeInUp } from '@/utils/framerMotion'
+import { appFadeInUp } from '@/lib/framer-motion/framerMotion';
 
 export const Wrapper = ({
 	content,
 }: {
-	content: ReactNode
+	content: ReactNode;
 }) => {
-	const control = useAnimation()
-	const ref = useRef(null)
-	const inView = useInView(ref)
+	const control = useAnimation();
+	const ref = useRef(null);
+	const inView = useInView(ref);
 
 	useEffect(() => {
 		if (inView) {
-			control.start('visible')
+			control.start('visible');
 		} else {
-			control.start('hidden')
+			control.start('hidden');
 		}
-	}, [control, inView])
+	}, [control, inView]);
 
 	return (
 		<motion.div
 			ref={ref}
 			variants={appFadeInUp}
-			initial='hidden'
+			initial="hidden"
 			animate={control}
-			exit='exit'
-			className='article-wrapper'>
+			exit="exit"
+			className="article-wrapper">
 			{content}
 		</motion.div>
-	)
-}
+	);
+};

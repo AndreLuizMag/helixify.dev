@@ -1,24 +1,42 @@
-@import 'https://cdn.jsdelivr.net/gh/Helixify/HelixCSS@v0.6-beta/dist/compressed/main.css';
-@import 'https://cdn.jsdelivr.net/gh/Helixify/HelixColor@v0.4-beta/dist/compressed/color-scheme.css';
-@import '../fonts/PollyRounded/polly-rounded.scss';
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "../fonts/PollyRounded/polly-rounded.scss";
+@import "./helixify.scss";
 
 :root {
-	--font-family: Polly Rounded;
-	--heading-color: var(--font-primary);
-	--text-color: var(--font-tertiary);
-	--code-color: var(--font-tertiary);
-	--header-size: calc(32px + 52px);
+  --font-family: "Inter", sans-serif;
+  --font-family-heading: "Polly Rounded";
+  --heading-color: var(--font-primary);
+  --text-color: var(--font-tertiary);
+  --code-color: var(--font-tertiary);
+  --header-size: calc(32px + 52px);
 }
 
-body {
-	min-height: 100dvh;
+.main-body {
+  padding-top: calc(2rem + 3rem + 2rem);
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.64;
+    background: {
+      image: url("/texture/noise.png");
+      repeat: repeat;
+    }
+  }
+}
+
+main {
+  min-height: 100dvh;
 }
 
 hr {
-	border: none;
-	height: 1px;
+  border: none;
+  height: 1px;
+  background-color: var(--helixify-border);
 }
 
 .p-header-height {
-	padding-top: var(--header-size);
+  padding-top: var(--header-size);
 }

@@ -1,12 +1,12 @@
-import React from 'react'
-import { HelixColorWrapped } from '@/templates/HelixColor'
+import React from 'react';
+import { HelixColorWrapped } from '@/app/templates/HelixColor';
 
 const HelixColor = () => {
 	return (
 		<main>
 			<HelixColorWrapped />
 		</main>
-	)
-}
+	);
+};
 
-export default HelixColor
+export default HelixColor;
