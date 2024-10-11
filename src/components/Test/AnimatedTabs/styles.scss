@@ -1,0 +1,11 @@
+.animate-tab {
+  .item {
+    &.active {
+      color: var(--blue-200);
+    }
+  }
+
+  .line {
+    height: 2px;
+  }
+}

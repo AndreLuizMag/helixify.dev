@@ -1,4 +1,5 @@
 import { SecIntro } from '@/components/SecIntro';
+import { polly_rounded } from '@/fonts/fonts';
 
 const Home = () => {
 	return (
@@ -17,7 +18,13 @@ const Home = () => {
 			</section>
 			<section>
 				<div className="container-lg">
-					<h1>Hello world</h1>
+					<h1 className={polly_rounded.className}>Hello world</h1>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+						libero commodi porro suscipit eos dolores vero ipsum omnis repellat
+						molestias, consequatur cumque ipsam perspiciatis alias quos nisi
+						nemo quisquam quibusdam.
+					</p>
 				</div>
 			</section>
 		</main>

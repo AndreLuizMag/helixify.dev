@@ -1,11 +1,15 @@
-import React from 'react'
+import { Header } from '@/components/Header';
+import { AnimatedTabs } from '@/components/Test/AnimatedTabs';
+import React from 'react';
 
 const Blank = () => {
 	return (
 		<main>
-			<h1>Blank</h1>
+			<Header />
+			<section className="test-sec-height" />
+			<section className="test-sec-height" />
 		</main>
-	)
-}
+	);
+};
 
-export default Blank
+export default Blank;

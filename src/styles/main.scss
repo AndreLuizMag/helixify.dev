@@ -1,10 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import "../fonts/PollyRounded/polly-rounded.scss";
 @import "./helixify.scss";
 
 :root {
-  --font-family: "Inter", sans-serif;
-  --font-family-heading: "Polly Rounded";
+  --font-family-text: inherit;
   --heading-color: var(--font-primary);
   --text-color: var(--font-tertiary);
   --code-color: var(--font-tertiary);
@@ -25,6 +22,10 @@
       repeat: repeat;
     }
   }
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 main {

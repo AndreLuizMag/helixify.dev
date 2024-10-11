@@ -1,9 +1,18 @@
+import { inter } from '@/fonts/fonts';
+import type { ReactNode } from 'react';
+import '@/styles/test-main.scss';
+
 const BlankLayout = ({
 	children,
 }: Readonly<{
-	children: React.ReactNode;
+	children: ReactNode;
 }>) => {
-	return <body>{children}</body>;
+	return (
+		<body
+			className={`${inter.className} main-body theme-helixify color-helixify`}>
+			{children}
+		</body>
+	);
 };
 
 export default BlankLayout;
