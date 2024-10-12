@@ -7,6 +7,7 @@ const Blank = () => {
 		<main>
 			<Header />
 			<section className="test-sec-height" />
+			<AnimatedTabs />
 			<section className="test-sec-height" />
 		</main>
 	);

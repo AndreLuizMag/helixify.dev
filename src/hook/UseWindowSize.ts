@@ -19,14 +19,12 @@ export const useWindowSize = (): WindowSize => {
 			});
 		};
 
-		// Adiciona o event listener quando o componente é montado
 		window.addEventListener('resize', handleResize);
 
-		// Remove o event listener quando o componente é desmontado
 		return () => {
 			window.removeEventListener('resize', handleResize);
 		};
-	}, []); // O array vazio faz com que o efeito só seja executado uma vez, sem depender de quaisquer valores
+	}, []);
 
 	return windowSize;
 };
