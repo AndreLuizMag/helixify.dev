@@ -1,52 +1,66 @@
 import type { Metadata } from 'next'
-import { Analytics } from '@vercel/analytics/react'
-import '@/styles/main.scss'
-import 'helix-color'
-// import localFont from 'next/font/local'
+import localFont from 'next/font/local'
+import { Roboto, Roboto_Serif } from "next/font/google";
+import type { ReactNode } from 'react'
+import 'helix-css'
+import '../styles/main.scss'
 
-// const PollyRounded = localFont({
-// 	src: [
-// 		{
-// 			path: '../fonts/PollyRounded/polly-rounded-thin.otf',
-// 			weight: '100',
-// 			style: 'normal',
-// 		},
-// 		{
-// 			path: '../fonts/PollyRounded/polly-rounded-light.otf',
-// 			weight: '200',
-// 			style: 'normal',
-// 		},
-// 		{
-// 			path: '../fonts/PollyRounded/polly-rounded-regular.otf',
-// 			weight: '400',
-// 			style: 'normal',
-// 		},
-// 		{
-// 			path: '../fonts/PollyRounded/polly-rounded-bold.otf',
-// 			weight: '700',
-// 			style: 'normal',
-// 		},
-// 	],
-// 	display: 'swap',
-// })
+const pollyRounded = localFont({
+  variable: '--font-polly-rounded',
+  src: [
+    {
+      path: '../../public/fonts/polly-rounded/polly-rounded-thin.otf',
+      weight: '100',
+      style: 'normal',
+    },
+		{
+			path: '../../public/fonts/polly-rounded/polly-rounded-light.otf',
+			weight: '200',
+			style: 'normal',
+		},
+		{
+			path: '../../public/fonts/polly-rounded/polly-rounded-regular.otf',
+			weight: '400',
+			style: 'normal',
+		},
+		{
+			path: '../../public/fonts/polly-rounded/polly-rounded-bold.otf',
+			weight: '700',
+			style: 'normal',
+		},
+	],
+	display: 'swap',
+})
+
+const robotoSans = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  display: 'swap',
+});
+
+const robotoSerif = Roboto_Serif({
+  variable: "--font-roboto-serif",
+  subsets: ["latin"],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
 	title: 'Helixify',
-	description:
-		'Platform for provides open-source solutions',
+	description: 'Platform for provides open-source solutions',
 }
 
-export default function RootLayout({
+const RootLayout = ({
 	children,
 }: Readonly<{
-	children: React.ReactNode
-}>) {
+	children: ReactNode
+}>) => {
 	return (
-		<html lang='en'>
-			<body className='ds-flex flow-col-nw justify-between'>
+		<html lang="en">
+			<body className={`${pollyRounded.variable} ${robotoSans.variable} ${robotoSerif.variable}`}>
 				{children}
-				<Analytics />
 			</body>
 		</html>
 	)
 }
+
+export default RootLayout

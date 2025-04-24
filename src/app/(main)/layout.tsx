@@ -1,16 +1,11 @@
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
+import type { ReactNode } from 'react'
 
-export default function RootLayout({
+const MainLayout = ({
 	children,
 }: Readonly<{
-	children: React.ReactNode
-}>) {
-	return (
-		<>
-			<Header />
-			{children}
-			<Footer />
-		</>
-	)
+	children: ReactNode
+}>) => {
+	return <>{children}</>
 }
+
+export default MainLayout

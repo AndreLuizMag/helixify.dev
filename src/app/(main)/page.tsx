@@ -1,11 +1,14 @@
-import { HelixifyWrapped } from '@/templates/Helixify'
-import '@/styles/helixify.scss'
+import React from 'react'
 
-const Home = () => {
+const HomePage = () => {
 	return (
-		<main>
-			<HelixifyWrapped />
+		<main className='p-block-16'>
+			<div className="hx-container-md">
+				<h1>Helixify</h1>
+				<p className='font-size-lg'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis velit placeat voluptatem optio enim dolore commodi, dolorem quas distinctio illo veritatis corrupti sit beatae non doloribus voluptas suscipit similique quidem.</p>
+			</div>
 		</main>
 	)
 }
-export default Home
+
+export default HomePage
