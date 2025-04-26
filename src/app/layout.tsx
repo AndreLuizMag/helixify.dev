@@ -1,18 +1,18 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-import { Roboto, Roboto_Serif } from "next/font/google";
+import { Roboto, Roboto_Serif } from 'next/font/google'
 import type { ReactNode } from 'react'
 import 'helix-css'
 import '../styles/main.scss'
 
 const pollyRounded = localFont({
-  variable: '--font-polly-rounded',
-  src: [
-    {
-      path: '../../public/fonts/polly-rounded/polly-rounded-thin.otf',
-      weight: '100',
-      style: 'normal',
-    },
+	variable: '--font-polly-rounded',
+	src: [
+		{
+			path: '../../public/fonts/polly-rounded/polly-rounded-thin.otf',
+			weight: '100',
+			style: 'normal',
+		},
 		{
 			path: '../../public/fonts/polly-rounded/polly-rounded-light.otf',
 			weight: '200',
@@ -33,16 +33,16 @@ const pollyRounded = localFont({
 })
 
 const robotoSans = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
-  display: 'swap',
-});
+	variable: '--font-roboto',
+	subsets: ['latin'],
+	display: 'swap',
+})
 
 const robotoSerif = Roboto_Serif({
-  variable: "--font-roboto-serif",
-  subsets: ["latin"],
-  display: 'swap',
-});
+	variable: '--font-roboto-serif',
+	subsets: ['latin'],
+	display: 'swap',
+})
 
 export const metadata: Metadata = {
 	title: 'Helixify',
@@ -55,10 +55,11 @@ const RootLayout = ({
 	children: ReactNode
 }>) => {
 	return (
-		<html lang="en">
-			<body className={`${pollyRounded.variable} ${robotoSans.variable} ${robotoSerif.variable}`}>
-				{children}
-			</body>
+		<html
+			lang="en"
+			className={`${pollyRounded.variable} ${robotoSans.variable} ${robotoSerif.variable}`}
+		>
+			<body>{children}</body>
 		</html>
 	)
 }
