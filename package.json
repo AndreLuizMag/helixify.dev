@@ -13,7 +13,6 @@
   "dependencies": {
     "@next/mdx": "^15.3.1",
     "@types/mdx": "^2.0.13",
-    "motion": "^12.9.0",
     "next": "15.3.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -26,7 +25,6 @@
     "gray-matter": "^4.0.3",
     "helix-css": "^0.7.3",
     "next-mdx-remote": "^5.0.0",
-    "sass": "^1.87.0",
     "typescript": "^5"
   }
 }
