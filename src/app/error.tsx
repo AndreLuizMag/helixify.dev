@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 
-const Error = ({
+const ErrorBoundary = ({
 	error,
 	reset,
 }: {
@@ -30,4 +30,4 @@ const Error = ({
 	)
 }
 
-export default Error
+export default ErrorBoundary

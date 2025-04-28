@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
 import { Roboto, Roboto_Serif } from 'next/font/google'
+import localFont from 'next/font/local'
 import type { ReactNode } from 'react'
 import 'helix-css'
-import '../styles/main.scss'
+import '../styles/main.css'
 
 const pollyRounded = localFont({
 	variable: '--font-polly-rounded',
