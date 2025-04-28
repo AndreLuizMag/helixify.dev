@@ -4,6 +4,7 @@ import localFont from 'next/font/local'
 import type { ReactNode } from 'react'
 import 'helix-css'
 import '../styles/main.css'
+import { BgNoise } from '@/components/BgNoise'
 
 const pollyRounded = localFont({
 	variable: '--font-polly-rounded',
@@ -59,7 +60,10 @@ const RootLayout = ({
 			lang="en"
 			className={`${pollyRounded.variable} ${robotoSans.variable} ${robotoSerif.variable}`}
 		>
-			<body>{children}</body>
+			<body>
+				<BgNoise />
+				{children}
+			</body>
 		</html>
 	)
 }

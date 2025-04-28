@@ -1,4 +1,16 @@
+@import url("helix-color/_all.css");
+@import url("helixify/_all.css");
+@import url("animation/_all.css");
+
 :root {
-	--font-family: var(--font-roboto-serif);
-	--font-family-heading: var(--font-roboto);
+  --font-family: var(--font-roboto-serif);
+  --font-family-heading: var(--font-roboto);
+  --heading-color: hsla(0, 0%, 92%, 1);
+}
+
+body {
+  background-color: var(--helixify-dark);
+  color: hsla(0, 0%, 64%, 1);
+  min-height: 100vh;
+  position: relative;
 }
