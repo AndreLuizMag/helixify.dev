@@ -1,6 +1,6 @@
-import { BannerIntro } from '@/components/BannerIntro';
-import { GridHome } from '@/components/GridHome';
-import React from 'react';
+import { BannerIntro } from '@/components/BannerIntro'
+import { GridHome } from '@/components/GridHome'
+import React from 'react'
 
 const HomePage = () => {
 	return (
@@ -14,7 +14,7 @@ const HomePage = () => {
 				</section>
 			</div>
 		</main>
-	);
-};
+	)
+}
 
-export default HomePage;
+export default HomePage
