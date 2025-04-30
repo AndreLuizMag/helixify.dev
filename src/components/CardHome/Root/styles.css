@@ -1,6 +1,4 @@
 .card-home {
-	box-shadow: var(--helixify-elevation-md);
-
 	.highlight-svg {
 		width: 256px;
 		height: 140px;
@@ -34,12 +32,6 @@
 		}
 	}
 }
-
-/* @container grid-home (max-width: 880px) {
-  .card-home {
-    padding: 2rem;
-  }
-} */
 
 @container container-card (max-width: 32rem) {
 	.card-home {

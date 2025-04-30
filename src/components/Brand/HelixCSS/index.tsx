@@ -17,7 +17,11 @@ export const HelixCSS = ({
 	classNameSufix = classNamePath,
 	height = 64,
 }: HelixCSSProps) => {
-	const width = height * 4.71875
+	const originalWidth = 302
+	const originalHeight = 64
+	const proportion = originalWidth / originalHeight
+
+	const width = height * proportion
 
 	return (
 		<svg

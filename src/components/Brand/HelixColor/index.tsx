@@ -4,7 +4,7 @@ type HelixColorProps = {
 	className?: string
 	classNamePath?: string
 	classNameIcon?: string
-	classNameHelix?: string
+	classNameText?: string
 	classNameSufix?: string
 	height?: number
 }
@@ -13,10 +13,16 @@ export const HelixColor = ({
 	className,
 	classNamePath = 'color-1',
 	classNameIcon = classNamePath,
-	classNameHelix = classNamePath,
+	classNameText = classNamePath,
 	classNameSufix = classNamePath,
 	height = 64,
 }: HelixColorProps) => {
+	const originalWidth = 334
+	const originalHeight = 64
+	const proportion = originalWidth / originalHeight
+
+	const width = height * proportion
+
 	return (
 		<svg
 			width="334"
@@ -24,7 +30,7 @@ export const HelixColor = ({
 			viewBox="0 0 334 64"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
-			className={className}
+			className={`brand brand-helix-color ${className}`}
 		>
 			<title>Helix Color</title>
 			{/* Icon */}
@@ -37,7 +43,7 @@ export const HelixColor = ({
 				/>
 			</g>
 
-			<g className={classNameHelix}>
+			<g className={classNameText}>
 				{/* H */}
 				<path
 					d="M97.1766 11.9595C98.1228 11.9595 98.8916 12.7062 98.8916 13.6253V49.4126C98.8916 50.3316 98.1228 51.021 97.1766 51.021C96.2304 51.021 95.5207 50.3316 95.5207 49.4126V33.6731H67.3709V49.4126C67.3709 50.3316 66.6021 51.021 65.6559 51.021C64.7097 51.021 64 50.3316 64 49.4126V13.6253C64 12.7637 64.7097 11.9595 65.6559 11.9595C66.6021 11.9595 67.3709 12.7062 67.3709 13.6253V30.5711H95.5207V13.6253C95.5207 12.7637 96.2304 11.9595 97.1766 11.9595Z"

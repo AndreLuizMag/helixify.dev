@@ -1,6 +1,4 @@
 .background-noise {
-	position: absolute;
-	inset: 0;
 	background-image: url("../../../public/images/backgrounds/noise.png");
 	background-size: 128px;
 	background-repeat: repeat;

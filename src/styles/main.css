@@ -4,8 +4,8 @@
 
 :root {
 	/* Helix Color */
-	--color-1: hsla(0, 0%, 92%, 1);
-	--color-3: hsla(0, 0%, 64%, 1);
+	--color-1: hsla(0, 0%, 92%, 1); /* Font primary */
+	--color-3: hsla(0, 0%, 64%, 1); /* Font tertiary */
 
 	/* Font */
 	--font-family: var(--font-roboto-serif);

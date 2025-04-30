@@ -1,9 +1,5 @@
 .banner-intro {
-	position: relative;
-	overflow: hidden;
-	box-shadow: var(--helixify-elevation-lg);
 	padding: 128px 64px;
-	background-color: var(--helixify-dark);
 	opacity: 1;
 	transform: translateY(0);
 	transition: opacity 0.64s var(--ease-in), transform 0.64s var(--fade-in);
@@ -14,16 +10,10 @@
 		transform: translateY(0);
 		transition: opacity 0.64s var(--ease-in), transform 0.64s var(--fade-in)
 			0.32s;
-
-		/* h1 {
-      font-size: 4rem;
-    } */
 	}
 
 	.icon {
-		z-index: -1;
 		--_size: 637px;
-		position: absolute;
 		bottom: -4rem;
 		right: -6rem;
 		opacity: 1;

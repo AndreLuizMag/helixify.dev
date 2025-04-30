@@ -3,7 +3,7 @@ import './styles.css'
 
 export const BannerIntro = () => {
 	return (
-		<div className="banner-intro width-100 ds-flex flow-row-nw justify-start align-center border-radius-2xl">
+		<div className="banner-intro ps-relative overflow-hidden width-100 ds-flex flow-row-nw justify-start align-center bg-helixify-dark border-radius-2xl elevation-lg">
 			<div className="content ds-flex flow-col-nw gap-md">
 				<h1 className="md:heading-2 font-weight-400">
 					An open-source platform for developers
@@ -19,7 +19,7 @@ export const BannerIntro = () => {
 				viewBox="0 0 512 512"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
-				className="icon lg:ds-none"
+				className="icon ps-absolute lg:ds-none z-index-negative"
 			>
 				<title>Helixify icon</title>
 				<g filter="url(#filter0_ddii_810_11462)">

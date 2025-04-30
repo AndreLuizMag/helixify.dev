@@ -25,7 +25,7 @@ export const Root = <E extends ElementType = 'a'>({
 	return (
 		<Component
 			{...rest}
-			className={`card-home ps-relative overflow-hidden width-100 height-100 p-inline-10 p-block-16 ds-flex flow-col-nw justify-center align-start gap-6 bg-helixify-dark ${isLink && 'text-decoration-none'} border-radius-2xl ${className ?? ''}`}
+			className={`card-home ps-relative overflow-hidden width-100 height-100 p-inline-10 p-block-16 ds-flex flow-col-nw justify-center align-start gap-6 bg-helixify-dark ${isLink && 'text-decoration-none'} border-radius-2xl elevation-md ${className ?? ''}`}
 		>
 			{elementId === 1 ? (
 				<Brand.HelixCSSMin
