@@ -1,9 +1,0 @@
-.card-home {
-	span {
-		font-family: var(--font-roboto-serif);
-	}
-
-	&a {
-		text-decoration: none;
-	}
-}
