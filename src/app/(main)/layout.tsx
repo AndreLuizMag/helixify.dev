@@ -1,19 +1,11 @@
-import type { ReactNode } from 'react';
-import { HeaderOld } from '@/components/HeaderOld';
-import { Footer } from '@/components/Footer';
+import type { ReactNode } from 'react'
 
 const MainLayout = ({
 	children,
 }: Readonly<{
-	children: ReactNode;
+	children: ReactNode
 }>) => {
-	return (
-		<body className="main-body theme-helixify color-helixify">
-			<HeaderOld />
-			{children}
-			<Footer />
-		</body>
-	);
-};
+	return <>{children}</>
+}
 
-export default MainLayout;
+export default MainLayout

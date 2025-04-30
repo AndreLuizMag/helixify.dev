@@ -1,0 +1,25 @@
+:root {
+	--helixify-dark: hsl(0, 0%, 12.2%);
+	--helixify-light: hsl(53, 28.6%, 94.5%);
+
+	--helixify-dark-border: hsl(0, 0%, 23.9%);
+	--helixify-light-border: hsl(0, 0%, 63.9%);
+
+	--helixify-elevation-sm:
+		1px 2px 4px 0px rgba(255, 255, 255, 0.04) inset,
+		-1px -2px 4px 0px rgba(0, 0, 0, 0.16) inset,
+		-1px 0px 2px 0px rgba(0, 0, 0, 0.24), 1px 2px 2px 0px rgba(0, 0, 0, 0.24);
+	--helixify-elevation-md:
+		2px 4px 8px 0px rgba(255, 255, 255, 0.04) inset,
+		-2px -4px 8px 0px rgba(0, 0, 0, 0.16) inset,
+		-1px 0px 4px 0px rgba(0, 0, 0, 0.24), 2px 4px 4px 0px rgba(0, 0, 0, 0.24);
+	--helixify-elevation-lg:
+		4px 8px 16px 0px rgba(255, 255, 255, 0.04) inset,
+		-4px -8px 16px 0px rgba(0, 0, 0, 0.16) inset,
+		-2px 0px 8px 0px rgba(0, 0, 0, 0.24), 4px 8px 8px 0px rgba(0, 0, 0, 0.24);
+	--helixify-inset:
+		0px -1px 4px 0px rgba(0, 0, 0, 0.24) inset,
+		2px 4px 8px 0px rgba(0, 0, 0, 0.16) inset,
+		-2px -2px 4px 0px rgba(0, 0, 0, 0.16),
+		2px 4px 16px 0px rgba(255, 255, 255, 0.04);
+}
