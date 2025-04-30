@@ -1,0 +1,47 @@
+.banner-intro {
+	padding: 128px 64px;
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 0.64s var(--ease-in), transform 0.64s var(--fade-in);
+
+	.content {
+		width: 75%;
+		opacity: 1;
+		transform: translateY(0);
+		transition: opacity 0.64s var(--ease-in), transform 0.64s var(--fade-in)
+			0.32s;
+	}
+
+	.icon {
+		--_size: 637px;
+		bottom: -4rem;
+		right: -6rem;
+		opacity: 1;
+		transition: opacity 0.32s var(--ease-in) 0.64s;
+	}
+}
+
+@starting-style {
+	.banner-intro {
+		opacity: 0;
+		transform: translateY(4rem);
+
+		.content {
+			opacity: 0;
+			transform: translateY(2rem);
+		}
+
+		.icon {
+			opacity: 0;
+		}
+	}
+}
+
+@media (max-width: 64rem) {
+	.banner-intro {
+		padding: 64px 32px;
+		.content {
+			width: 100%;
+		}
+	}
+}
