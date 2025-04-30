@@ -5,6 +5,8 @@ import type { ReactNode } from 'react'
 import 'helix-css'
 import '../styles/main.css'
 import { BgNoise } from '@/components/BgNoise'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const pollyRounded = localFont({
 	variable: '--font-polly-rounded',
@@ -63,6 +65,8 @@ const RootLayout = ({
 			<body>
 				<BgNoise />
 				{children}
+				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	)
