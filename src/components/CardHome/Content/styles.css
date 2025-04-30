@@ -1,0 +1,19 @@
+.card-home {
+	.title {
+		&span {
+			font-family: var(--font-roboto-serif);
+		}
+	}
+
+	&a {
+		text-decoration: none;
+	}
+}
+/* 
+@media (max-width: 48rem) {
+  .card-home {
+    .title {
+      font-size: 2rem;
+    }
+  }
+} */

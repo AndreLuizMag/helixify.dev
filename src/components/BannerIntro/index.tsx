@@ -1,57 +1,25 @@
 import React from 'react'
 import './styles.css'
-import Image from 'next/image'
 
 export const BannerIntro = () => {
 	return (
 		<div className="banner-intro width-100 ds-flex flow-row-nw justify-start align-center border-radius-2xl">
 			<div className="content ds-flex flow-col-nw gap-md">
-				<h1>A platform open-source for everyone</h1>
+				<h1 className="md:heading-2 font-weight-400">
+					An open-source platform for developers
+				</h1>
 				<p>
-					Helixify is a centralized platform that provides open-source solutions
-					for web developers, simplifying the development process by offering
-					essential tools all in one place.
+					Helixify is a hub of open-source tools that streamline front-end
+					development. Everything you need, in one place.
 				</p>
 			</div>
-			{/* <Image
-				src="/brands/intro-icon.png"
-				width={512}
-				height={512}
-				alt="Helixify icon"
-				className="image"
-			/> */}
-			{/* <Image
-				src="/brands/intro-icon.svg"
-				width={512}
-				height={512}
-				alt="Helixify icon"
-				className="image"
-			/> */}
-
-			{/* <svg
-				width="64"
-				height="64"
-				viewBox="0 0 64 64"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-				className="icon"
-			>
-				<title>Helixify icon</title>
-				<path
-					d="M5 42.8916C5 42.8916 8.28763 40.9362 12.2824 40.7296C18.8822 40.3882 29.1231 45.6225 36.9745 41.5261C44.8259 37.4298 43.2328 27.4164 43.2328 27.4164M58 20.3883C58 20.3883 54.7124 22.3437 50.7176 22.5503C44.1178 22.8917 33.8769 17.6574 26.0255 21.7538C18.1741 25.8501 19.7672 35.8635 19.7672 35.8635M42.8606 5C42.8606 5 41.8598 6.4792 41.1862 9.32391C40.5127 12.1686 41.1863 15.1333 41.1863 15.1333M20.4049 58.3728C20.4049 58.3728 21.4057 56.8936 22.0792 54.0489C22.7528 51.2042 22.0792 48.2395 22.0792 48.2395"
-					stroke="#1F1F1F"
-					strokeWidth="3.18607"
-					strokeLinecap="round"
-				/>
-			</svg> */}
-
 			<svg
 				width="512"
 				height="512"
 				viewBox="0 0 512 512"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
-				className="icon"
+				className="icon lg:ds-none"
 			>
 				<title>Helixify icon</title>
 				<g filter="url(#filter0_ddii_810_11462)">

@@ -1,6 +1,6 @@
-import { routes } from './utils'
-import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import { routes } from './utils'
 
 type Props = {
 	params: Promise<{ slug: string }>

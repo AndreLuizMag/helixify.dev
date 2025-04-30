@@ -1,14 +1,18 @@
 import { BannerIntro } from '@/components/BannerIntro'
+import { GridHome } from '@/components/GridHome'
 import React from 'react'
 
 const HomePage = () => {
 	return (
 		<main className="p-block-16">
-			<section>
-				<div className="hx-container-md">
+			<div className="hx-container-md ds-flex flow-col-nw gap-16">
+				<section>
 					<BannerIntro />
-				</div>
-			</section>
+				</section>
+				<section>
+					<GridHome />
+				</section>
+			</div>
 		</main>
 	)
 }

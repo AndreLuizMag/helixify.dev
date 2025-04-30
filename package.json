@@ -25,6 +25,7 @@
     "gray-matter": "^4.0.3",
     "helix-css": "^0.7.3",
     "next-mdx-remote": "^5.0.0",
+    "react-feather": "^2.0.10",
     "typescript": "^5"
   }
 }
