@@ -9,7 +9,7 @@ type HelixifyMinProps = {
 
 export const HelixifyMin = ({
 	className,
-	classNamePath = 'color-1',
+	classNamePath = 'color-dark-secondary',
 	classNameText = classNamePath,
 	height = 64,
 }: HelixifyMinProps) => {

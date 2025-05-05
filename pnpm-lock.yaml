@@ -45,6 +45,9 @@ importers:
       gray-matter:
         specifier: ^4.0.3
         version: 4.0.3
+      helix-color:
+        specifier: ^0.7.1
+        version: 0.7.1
       helix-css:
         specifier: ^0.7.3
         version: 0.7.3
@@ -642,6 +645,9 @@ packages:
 
   hast-util-whitespace@3.0.0:
     resolution: {integrity: sha512-88JUN06ipLwsnv+dVn+OIYOvAuvBMy/Qoi6O7mQHxdPXpjy+Cd6xRkWwux7DKO+4sYILtLBRIKgsdpS2gQc7qw==}
+
+  helix-color@0.7.1:
+    resolution: {integrity: sha512-6JnRlUoFQghc0iQMRsyEH4x/g73MEBdgZGTO/W12jkcowSOtf74D5iMke5+8PKZFMJselGx5lXFqfyjIb8NzkA==}
 
   helix-css@0.7.3:
     resolution: {integrity: sha512-SzXx4SAGJvLEHs0XCIqToj/vioMWeN+gkbjxiG9YfOH4jfaVY8VcA10QQuR/RDdX9qdJ+bHKgHFsLHjoc4rPqg==}
@@ -1579,6 +1585,8 @@ snapshots:
   hast-util-whitespace@3.0.0:
     dependencies:
       '@types/hast': 3.0.4
+
+  helix-color@0.7.1: {}
 
   helix-css@0.7.3: {}
 
