@@ -10,7 +10,7 @@ type HelixColorMinProps = {
 
 export const HelixColorMin = ({
 	className,
-	classNamePath = 'color-1',
+	classNamePath = 'color-dark-secondary',
 	classNameText = classNamePath,
 	classNameSufix = classNamePath,
 	height = 64,
