@@ -15,10 +15,12 @@ export const Content = <E extends ElementType = 'h2'>({
 	const Component = as || 'h2'
 	return (
 		<div className="ds-flex flow-col-nw gap-4">
-			<Component className="title heading-2 md:heading-3 font-weight-400 line-height-none color-1">
+			<Component className="title heading-2 md:heading-3 font-weight-400 line-height-none">
 				{title}
 			</Component>
-			{children && <p className="color-3 line-height-default">{children}</p>}
+			{children && (
+				<p className="line-height-default color-dark-secondary">{children}</p>
+			)}
 		</div>
 	)
 }

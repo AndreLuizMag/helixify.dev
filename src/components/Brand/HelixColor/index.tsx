@@ -11,7 +11,7 @@ type HelixColorProps = {
 
 export const HelixColor = ({
 	className,
-	classNamePath = 'color-1',
+	classNamePath = 'color-dark-secondary',
 	classNameIcon = classNamePath,
 	classNameText = classNamePath,
 	classNameSufix = classNamePath,

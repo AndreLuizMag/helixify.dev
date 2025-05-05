@@ -1,17 +1,12 @@
-@import url("helix-color/_all.css");
 @import url("helixify/_all.css");
 @import url("animation/_all.css");
 
 :root {
-	/* Helix Color */
-	--color-1: hsla(0, 0%, 92%, 1); /* Font primary */
-	--color-3: hsla(0, 0%, 64%, 1); /* Font tertiary */
-
 	/* Font */
 	--font-family: var(--font-roboto-serif);
 	--font-family-heading: var(--font-roboto);
-	--heading-color: var(--color-1);
-	--text-color: var(--color-3);
+	--heading-color: var(--text-dark-primary);
+	--text-color: var(--text-dark-secondary);
 	--heading-1: 4rem;
 	--heading-2: 2rem;
 }
